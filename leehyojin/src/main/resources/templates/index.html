@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="//www.thymeleaf.org" lang="ko">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" th:href="@{css/login.css}" type="text/css">
+    
+    <!-- 뒤로가기 방지 -->
+    <script type="text/javascript">
+        history.pushState(null, null, location.href);
+        window.onpopstate = function() {
+            history.go(1);
+        }
+    </script>
+    
+    <title>My WebFrameWork HOMEWORK</title>
+</head>
+<body>
+
+    	<div class="container">
+  <div class="screen">
+    <div class="screen__content">
+      <form class="login" id="loginForm" role="form" action="board" method="post">
+        <div class="login__field">
+          <input type="text" class="login__input" name ="id" id="id" placeholder="아이디" required>
+        </div>
+        <div class="login__field">
+          <input type="text" class="login__input" name="pw" id="pw" placeholder="비밀번호" required>
+        </div>
+        <button class="button login__submit" type="submit" id="submit">
+          <span class="button__text">로그인하기!</span>
+        </button>
+        <button class="button login__submit" onClick="location.href='signin'">
+          <span class="button__text">회원가입</span>
+        </button>            
+      </form>
+    </div>
+    <div class="screen__background">
+      <span class="screen__background__shape screen__background__shape4"></span>
+      <span class="screen__background__shape screen__background__shape3"></span>    
+      <span class="screen__background__shape screen__background__shape2"></span>
+      <span class="screen__background__shape screen__background__shape1"></span>
+    </div>    
+  </div>
+</div>
+
+</body>
+</html>

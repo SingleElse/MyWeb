@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="headFragment">
+		    
+        <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE"></title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My FrameWork HOMEWORK</title>
+        
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link href="css/styles.css" rel="stylesheet" />
+        
+        <!-- 전체 이용 css script -->
+        <script th:src="@{/js/jquery-1.12.4.js}"></script>
+        <script th:src="@{/js/jquery-ui-1.12.1.js}"></script>
+        <script th:src="@{/js/moment-2.29.1.js}"></script>
+        <script th:src="@{/js/chartjs-2.8.0.js}"></script>
+        <script th:src="@{/js/popper.min.js}"></script>
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+        <script th:src="@{/js/common.js}"></script>
+        <script th:src="@{/js/scripts.js}"></script>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/jquery-ui-1.12.1.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/jsp-test.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/datepicker.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/reset.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/chart/bootstrap.min.css}">
+        
+    </head>
+    
+    <body>
+    	<!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

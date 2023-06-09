@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net/nz/thymeleaf/layout"
+    layout:decorate="~{layouts/layout}">
+
+<th:block layout:fragment="css"></th:block>
+<th:block layout:fragment="script">
+    <script type="text/javascript">
+       history.pushState(null, null, location.href);
+       window.onpopstate = function(){
+           history.go(1);
+       }
+    </script>
+</th:block>
+
+<head>
+    <title>게시판</title>
+</head>
+
+<div th:if=${session.id} layout:fragment="content">
+    <div class="container">
+        <th:block th:include="board/clauseEdit.html"></th:block>
+        <th:block th:include="board/list.html"></th:block>
+    </div>
+</div>
+
+<div>
+	<div class="container">
+		<form name="search-form" autocomplete="off">
+			<select name="type">
+				<option selected value="">선택해주세요!</option>
+				<option value="bd_title">제목</option>
+				<option value="bdContent">내용</option>
+				<option value="writer">작성자</option>	
+			</select>
+			<input type="text" name="keyword" value=""></input>
+			<Input type="button" onclick="getSearchList()" class="btn btn-outline-primary mr-2" value="검색"></input>
+		</form>
+	</div>
+</div>
+
+</html>

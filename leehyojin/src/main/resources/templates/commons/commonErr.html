@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net/nz/thymeleaf/layout"
+    layout:decorate="~{layouts/layout}">
+    
+    <th:block layout:fragment="css">
+    </th:block>
+    <th:block layout:fragment="script">
+        <script type="text/javascript">
+           history.pushState(null, null, location.href);
+           window.onpopstate = function(){
+               history.go(1);
+           }
+        </script>
+    </th:block>
+    
+    <head>에러페이지</head>
+	<div layout:fragment="content">
+	    <div class="container">
+	        <div class="error">
+	            <strong>앗, 이런...</strong> <span>오류가 발생해 페이지를 출력할 수 없습니다.</span> <span>정말 죄송합니다...</span>
+	        </div>
+	    </div>
+	</div>
+</html>
